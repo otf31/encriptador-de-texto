@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Encriptador de texto</title>
+  </head>
+  <body>
+    <header>
+      <img id="logo" src="./public/top.svg" alt="logo" />
+    </header>
+    <div class="principal">
+      <section id="seccion1">
+        <span id="texto" contenteditable role="textbox"></span>
+        <div class="mensaje-validacion">
+          <img src="./public/exclamation-circle.svg" alt="advertencia" />
+          <p>Solo letras minúsculas y sin acento</p>
+        </div>
+        <div class="botones-accion">
+          <button id="botonencriptar" class="button-dark" onclick="encriptar()">
+            Encriptar
+          </button>
+          <button
+            id="botondesencriptar"
+            class="button-light"
+            onclick="desencriptar()"
+          >
+            Desencriptar
+          </button>
+        </div>
+      </section>
+      <section id="seccion2">
+        <div class="resultado__container">
+          <div class="con-mensaje__container">
+            <p id="resultado"></p>
+            <button class="button-light" onclick="copiar()">Copiar</button>
+          </div>
+          <div class="sin-mensaje__container">
+            <img class="muñeco" src="./public/muñeco.svg" alt="muñeco" />
+            <p class="sin-mensaje__titulo">Ningún mensaje fue encontrado</p>
+            <p class="sin-mensaje__texto">
+              Ingresa el texto que desees encriptar o desencriptar
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="script.js"></script>
+    <footer>
+      Made by <a href="https://github.com/otf31" target="_blank">otf31</a>
+    </footer>
+  </body>
+</html>
